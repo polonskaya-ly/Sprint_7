@@ -21,11 +21,3 @@ class CourierApi:
     def delete(self, payload):
         response = requests.delete(url + UrlConfig.api_delete_courirer, data=payload)
         return response
-
-
-
-
-
-
-
-
