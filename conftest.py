@@ -53,10 +53,3 @@ def create_order(delete_order):
     order_id = r['track']
     payload = {'track': order_id}
     delete_order.update(payload)
-
-
-@pytest.fixture(scope='function')
-def delete_order():
-    payload = {}
-    yield payload
-    OrderApi().put_cancel(payload)
